@@ -2,8 +2,8 @@
 
 set -e
 
-su -m myuser -c "python3 manage.py makemigrations scanner"
-su -m myuser -c "python3 manage.py migrate"
+python3 manage.py makemigrations scanner
+python3 manage.py migrate
 
 # Please use `docker-compose exec web python3 manage.py createsuperuser`
 # su -m myuser -c "python3 manage.py createsuperuser"
